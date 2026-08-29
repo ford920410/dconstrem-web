@@ -222,6 +222,43 @@ button.send:hover{filter:brightness(1.06)}
 
 
 
+
+/* ---------- problemas que reconoce el cliente ---------- */
+.probs{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:18px}
+.prob{background:var(--card);border:1px solid var(--line);border-radius:6px;
+  padding:24px 24px 22px 28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.prob::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
+.prob q{display:block;font-family:var(--titulo);font-weight:400;font-size:1.1rem;
+  line-height:1.26;letter-spacing:-.015em;color:var(--ink);margin:0 0 14px;quotes:none}
+.prob .sol{font-size:.92rem;color:var(--ink-soft);margin:0;line-height:1.55}
+.prob .sol b{color:var(--ink);font-weight:600}
+.prob .eti{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.62rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;
+  margin:0 0 12px}
+
+/* ---------- por que lo barato sale caro ---------- */
+.valor{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);
+  border-radius:6px;overflow:hidden;background:var(--card);box-shadow:var(--shadow)}
+@media(max-width:760px){.valor{grid-template-columns:1fr}}
+.valor > div{padding:30px 32px}
+.valor .barato{background:var(--bg-alt);border-right:1px solid var(--line)}
+@media(max-width:760px){.valor .barato{border-right:0;border-bottom:1px solid var(--line)}}
+.valor h3{font-family:var(--titulo);font-weight:400;font-size:1.14rem;margin:0 0 16px;
+  letter-spacing:-.015em}
+.valor .barato h3{color:var(--ink-soft)}
+.valor ul{list-style:none;padding:0;margin:0}
+.valor li{position:relative;padding-left:26px;margin-bottom:11px;font-size:.94rem;
+  color:var(--ink-soft);line-height:1.5}
+.valor li::before{position:absolute;left:0;top:0;font-weight:800;font-size:1.05rem}
+.valor .barato li::before{content:"\00d7";color:#9a5a52}
+.valor .nuestro li::before{content:"\2713";color:var(--accent)}
+.valor .nuestro li b{color:var(--ink);font-weight:600}
+.remate-valor{margin:30px 0 0;padding:26px 30px;border-left:4px solid var(--accent);
+  background:var(--accent-soft);border-radius:0 5px 5px 0}
+.remate-valor p{margin:0;font-family:var(--titulo);font-weight:400;
+  font-size:clamp(1.08rem,2.1vw,1.38rem);line-height:1.34;letter-spacing:-.018em;
+  color:var(--ink);max-width:46ch}
+
 /* ---------- barra fija de contacto en celular ---------- */
 .barra-movil{display:none}
 @media(max-width:760px){
@@ -398,6 +435,7 @@ html[data-dev] .hole{display:block}
         <span>LLC &middot; Houston, Texas</span></span>
     </a>
     <nav>
+      <a href="#problemas"><span data-en>Problems we fix</span><span data-es>Qué resolvemos</span></a>
       <a href="#fences"><span data-en>Fences</span><span data-es>Cercas</span></a>
       <a href="#decks"><span data-en>Patios &amp; Decks</span><span data-es>Patios y Decks</span></a>
       <a href="#antes-despues"><span data-en>Before &amp; after</span><span data-es>Antes y después</span></a>
@@ -445,6 +483,108 @@ html[data-dev] .hole{display:block}
     </div>
   </div>
 </div>
+
+<section id="problemas">
+  <div class="wrap">
+    <h2 data-en>Sound familiar?</h2>
+    <h2 data-es>&iquest;Le suena conocido?</h2>
+    <p class="sub" data-en>These are the six reasons people in Houston call us.
+      If one of them is yours, we already know what to do about it.</p>
+    <p class="sub" data-es>&Eacute;stas son las seis razones por las que nos llaman en Houston.
+      Si alguna es la suya, ya sabemos qu&eacute; hacer.</p>
+    <div class="probs">
+      <div class="prob">
+        <span class="eti" data-en>Pets</span><span class="eti" data-es>Mascotas</span>
+        <q data-en>My dog keeps getting out.</q><q data-es>Mi perro se sale.</q>
+        <p class="sol" data-en>Solid pickets with no gaps, a <b>treated base board</b> along the bottom so nothing digs under, and gates that latch and stay square.</p>
+        <p class="sol" data-es>Tablas s&oacute;lidas sin huecos, <b>base board tratado</b> abajo para que nada escarbe por debajo, y portones que s&iacute; cierran y no se vencen.</p>
+      </div>
+      <div class="prob">
+        <span class="eti" data-en>Privacy</span><span class="eti" data-es>Privacidad</span>
+        <q data-en>The neighbors can see my whole backyard.</q><q data-es>El vecino ve todo mi patio.</q>
+        <p class="sol" data-en>Six or eight foot privacy fence, boards butted tight. Your yard becomes yours again the day we finish.</p>
+        <p class="sol" data-es>Cerca de privacidad de 6 u 8 pies, tabla con tabla, sin rendijas. Su patio vuelve a ser suyo el d&iacute;a que terminamos.</p>
+      </div>
+      <div class="prob">
+        <span class="eti" data-en>Storms</span><span class="eti" data-es>Tormentas</span>
+        <q data-en>It leaned over after the last storm.</q><q data-es>Se lade&oacute; con la &uacute;ltima tormenta.</q>
+        <p class="sol" data-en><b>4x4 posts anchored in concrete</b> and three rails instead of two. That is the whole difference between a fence that moves in wind and one that does not.</p>
+        <p class="sol" data-es><b>Postes 4x4 ahogados en concreto</b> y tres rieles en lugar de dos. &Eacute;sa es toda la diferencia entre una cerca que se mueve con el viento y una que no.</p>
+      </div>
+      <div class="prob">
+        <span class="eti" data-en>Rot</span><span class="eti" data-es>Podredumbre</span>
+        <q data-en>It is gray and rotting at the bottom.</q><q data-es>Est&aacute; gris y podrida por abajo.</q>
+        <p class="sol" data-en>Wood rots where it touches dirt. The base board takes that hit instead of your pickets &mdash; and a base board costs far less to replace than a fence.</p>
+        <p class="sol" data-es>La madera se pudre donde toca la tierra. El base board se lleva ese golpe en lugar de sus tablas &mdash; y cambiar un base board cuesta mucho menos que una cerca.</p>
+      </div>
+      <div class="prob">
+        <span class="eti" data-en>Heat</span><span class="eti" data-es>Calor</span>
+        <q data-en>We cannot use the backyard half the year.</q><q data-es>No podemos usar el patio medio a&ntilde;o.</q>
+        <p class="sol" data-en>A covered patio with real roofing turns an unusable yard into the place everyone sits. In Houston that is worth more than an extra room.</p>
+        <p class="sol" data-es>Un patio techado convierte un patio inservible en el lugar donde todos se sientan. En Houston eso vale m&aacute;s que un cuarto extra.</p>
+      </div>
+      <div class="prob">
+        <span class="eti" data-en>Safety</span><span class="eti" data-es>Seguridad</span>
+        <q data-en>The deck by the pool is slick and splintering.</q><q data-es>El deck de la alberca resbala y tiene astillas.</q>
+        <p class="sol" data-en>Decking chosen and spaced for wet feet, railing at the right height, and stairs that meet code. Around a pool this is not a detail.</p>
+        <p class="sol" data-es>Madera escogida y espaciada para pies mojados, barandal a la altura correcta y escalones a norma. Junto a una alberca eso no es un detalle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="valor" class="alt">
+  <div class="wrap">
+    <h2 data-en>Why the cheapest quote costs the most</h2>
+    <h2 data-es>Por qu&eacute; la cotizaci&oacute;n m&aacute;s barata sale m&aacute;s cara</h2>
+    <p class="sub" data-en>On day one, both fences look the same. Here is what you cannot
+      see from the street &mdash; and what it costs you two years later.</p>
+    <p class="sub" data-es>El primer d&iacute;a, las dos cercas se ven igual. Esto es lo que no se
+      ve desde la calle &mdash; y lo que le cuesta dos a&ntilde;os despu&eacute;s.</p>
+
+    <div class="valor">
+      <div class="barato">
+        <h3 data-en>The cheap quote</h3>
+        <h3 data-es>La cotizaci&oacute;n barata</h3>
+        <ul>
+          <li data-en>Posts driven into dirt, no concrete</li>
+          <li data-es>Postes clavados en la tierra, sin concreto</li>
+          <li data-en>Two rails instead of three &mdash; the boards bow</li>
+          <li data-es>Dos rieles en vez de tres &mdash; las tablas se pandean</li>
+          <li data-en>No base board, so the wood sits in wet soil</li>
+          <li data-es>Sin base board, la madera se queda en tierra h&uacute;meda</li>
+          <li data-en>No top cap &mdash; water goes straight into the end grain</li>
+          <li data-es>Sin top cap &mdash; el agua entra directo por la punta de la madera</li>
+          <li data-en>A price said out loud, and nobody answers afterward</li>
+          <li data-es>Un precio dicho de palabra, y despu&eacute;s nadie contesta</li>
+        </ul>
+      </div>
+      <div class="nuestro">
+        <h3 data-en>What we build</h3>
+        <h3 data-es>Lo que nosotros construimos</h3>
+        <ul>
+          <li data-en><b>4x4 posts anchored in concrete</b></li>
+          <li data-es><b>Postes 4x4 ahogados en concreto</b></li>
+          <li data-en><b>Three treated rails</b> &mdash; top, middle and bottom</li>
+          <li data-es><b>Tres rieles tratados</b> &mdash; arriba, medio y abajo</li>
+          <li data-en><b>Treated base board</b> so the pickets never touch dirt</li>
+          <li data-es><b>Base board tratado</b> para que las tablas nunca toquen la tierra</li>
+          <li data-en><b>2x6 top cap and 1x4 trim</b> to shed water</li>
+          <li data-es><b>Top cap de 2x6 y trim de 1x4</b> para botar el agua</li>
+          <li data-en><b>A written, itemized estimate</b> &mdash; and photos when we finish</li>
+          <li data-es><b>Cotizaci&oacute;n escrita y desglosada</b> &mdash; y fotos al terminar</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="remate-valor">
+      <p data-en>You are not paying for boards and nails. You are paying to stop thinking
+        about your fence &mdash; and to not pay for it a second time.</p>
+      <p data-es>Usted no est&aacute; pagando tablas y clavos. Est&aacute; pagando por dejar de
+        pensar en su cerca &mdash; y por no volver a pagarla una segunda vez.</p>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="wrap">
